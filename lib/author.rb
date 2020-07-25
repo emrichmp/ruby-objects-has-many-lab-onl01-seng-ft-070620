@@ -6,12 +6,12 @@ class Author
   end
   
   def add_post(a_post)
-    post.author = self
+    a_post.author = self
     @@post_count += 1
   end
   
   def add_post_by_title(a_post)
-    post = new.Post(a_post, self)
+    a_post = new.Post(a_post, self)
     add_post(a_post)
     @@post_count += 1
   end
