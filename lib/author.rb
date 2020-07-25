@@ -5,6 +5,12 @@ class Author
     @name = name
   end
   
+  def songs
+    Post.all.select do |a_post|
+      a_post.author == self
+    end
+  end
+  
   def add_post(a_post)
     a_post.author = self
     @@post_count += 1
